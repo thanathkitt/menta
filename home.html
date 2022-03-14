@@ -1,0 +1,117 @@
+<html>
+  <head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, shrink-to-fit=no"
+    />
+    <style>
+      @import url("https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha3/css/bootstrap.min.css");
+      @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css");
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+      * {
+        font-family: "Georgia";
+      }
+    </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+
+  <body style="background-color: black">
+    <div
+      class="container"
+      style="
+        color: white;
+        font-size: xx-large;
+        font-weight: bold;
+        text-align: center;
+        padding-top: 30px;
+      "
+    >
+      Menta
+    </div>
+
+    <div
+      class="container"
+      style="
+        color: white;
+        font-size: large;
+        font-weight: bold;
+        text-align: center;
+        padding-top: 30px;
+      "
+    >
+      LILI's FILM #3 - LISA Dance Performance Video
+    </div>
+
+    <div id="wrapper" class="container" style="padding-top: 70px">
+      <video class="video" id="video1" width="800" height="420" controls>
+        <source  src="./vdo/Lisa.mp4" type="video/mp4" />
+        /> Your browser does not support the video tag.
+      </video>
+
+      <video class="video" id="video2" width="300" height="420" controls style="margin-left: 100px">
+        <source src="./vdo/Lisa.mp4" type="video/mp4" />
+        /> Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <div class="container text-white" style="font-size: 30px">
+      <button onclick="rotate();" class=" text-white" style="background-color:black; border:none;">
+        <i class="far fa-hourglass" style="transform: rotate(-90deg) "></i>
+      </button>
+
+      </button>
+
+
+
+      <button class="text-white" style="margin-left: 60px; background-color:black; border:none;">
+        <i class="fas fa-bell" ></i>
+      </button>
+
+      
+        <i class="fas fa-retweet" style="margin-left: 60px;"></i>
+      <input type="text" style="width: 50px; height: 30px; border-radius: 10px; border: none; background-color: aliceblue; text-align: center; font-size: 17px; margin-left: 15px;" placeholder="start"></input>
+      <span> : </span>
+      <input type="text" style="width: 50px; height: 30px; border-radius: 10px; border: none; background-color: aliceblue; text-align: center; font-size: 17px;" placeholder="end"></input>
+      
+      <i class="fas fa-tachometer-alt" style="margin-left: 60px;"></i>
+      <button style="width: 50px; height: 30px; border-radius: 10px; border: none; background-color: aliceblue; text-align: center; font-size: 17px; margin-left: 15px;" >0.3 x</button>
+      <button style="width: 50px; height: 30px; border-radius: 10px; border: none; background-color: aliceblue; text-align: center; font-size: 17px; margin-left: 5px;" >0.5 x</button>
+      <button style="width: 50px; height: 30px; border-radius: 10px; border: none; background-color: aliceblue; text-align: center; font-size: 17px; margin-left: 5px;" >0.7 x</button>
+      <button style="width: 50px; height: 30px; border-radius: 10px; border: none; background-color: aliceblue; text-align: center; font-size: 17px; margin-left: 5px;" >1 x</button>
+      <button style="width: 50px; height: 30px; border-radius: 10px; border: none; background-color: aliceblue; text-align: center; font-size: 17px; margin-left: 5px;" >1.5 x</button>
+      <button style="width: 50px; height: 30px; border-radius: 10px; border: none; background-color: aliceblue; text-align: center; font-size: 17px; margin-left: 5px;" >2 x</button>
+      
+      <button class="text-white" style="margin-left: 60px; background-color:black; border:none; ">
+      <i class="fab fa-youtube" ></i>
+      <span style="font-size:20px;">play this on youtube.com</span>
+    </button>
+      </div>
+    </div>
+  </body>
+
+
+
+  <style>
+    #videoElement {
+      transform: rotateY(180deg);
+      -webkit-transform: rotateY(180deg); /* Safari and Chrome */
+      -moz-transform: rotateY(180deg); /* Firefox */
+    }
+  </style>
+
+  <script>
+      let rotation=0;
+      let rotation1=0;
+      var vdo=document.getElementsByClassName("video");
+      
+      function rotate() {
+          rotation += 180;
+          rotation1 += 180;
+          document.querySelector("#video1").style.transform = `rotateY(${rotation}deg)`;
+          document.querySelector("#video2").style.transform = `rotateY(${rotation1}deg)`;
+      }
+  </script>
+</html>
